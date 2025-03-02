@@ -1,10 +1,8 @@
 "use client";
 import { useState, useEffect } from "react";
-import Link from "next/link";
 import Image from "next/image";
 
 export default function Footer() {
-  const [darkMode, setDarkMode] = useState(false);
   const [showScroll, setShowScroll] = useState(false);
   const currentYear = new Date().getFullYear();
 
@@ -21,7 +19,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className={`footer ${darkMode ? "dark" : ""}`}>
+    <footer className={`footer`}>
       {/* Logo - Scroll to Top */}
       <div className="footer-logo" onClick={scrollToTop}>
         <Image src="/profile.jpg" alt="Logo" width={50} height={50} />
