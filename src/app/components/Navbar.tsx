@@ -20,7 +20,7 @@ export default function Navbar() {
       {/* Logo */}
       <div className="logo">
         <Link href="/">
-          <Image src="/logo.png" alt="Logo" width={50} height={50} />
+          <Image src="/profile.jpg" alt="Logo" width={50} height={50} />
         </Link>
       </div>
 
