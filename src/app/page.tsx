@@ -1,12 +1,3 @@
-/*export default function Home() {
-  return (
-    <main className="homeContainer">
-      <h1>Welcome to My Portfolio</h1>
-      <p>Showcasing my skills and projects.</p>
-    </main>
-  );
-}
-*/
 "use client";
 import { useEffect, useState } from "react";
 import Link from "next/link";
@@ -47,7 +38,7 @@ export default function Home() {
         {/* Profile Image */}
         <div className="profile">
           <Image
-            src="/profile.png"
+            src="/profile.jpg"
             alt="Sahil Gupta"
             width={250}
             height={250}
