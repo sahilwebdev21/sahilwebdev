@@ -40,13 +40,13 @@ export default function Footer() {
 
       {/* Social Media Icons */}
       <div className="footer-socials">
-        <a href="https://github.com/yourusername" target="_blank" className="social-icon" title="GitHub">
+        <a href="https://github.com/sahilgupta21" target="_blank" className="social-icon" title="GitHub">
           <Image src="/github.svg" alt="GitHub" width={30} height={30} />
         </a>
         <a href="https://twitter.com/yourhandle" target="_blank" className="social-icon" title="Twitter">
           <Image src="/twitter.svg" alt="Twitter" width={30} height={30} />
         </a>
-        <a href="https://linkedin.com/in/yourprofile" target="_blank" className="social-icon" title="LinkedIn">
+        <a href="https://www.linkedin.com/in/sahil-gupta-ba01b7350/" target="_blank" className="social-icon" title="LinkedIn">
           <Image src="/linkedin.svg" alt="LinkedIn" width={30} height={30} />
         </a>
       </div>
