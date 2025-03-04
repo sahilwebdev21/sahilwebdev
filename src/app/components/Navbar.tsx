@@ -2,6 +2,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { Menu, X } from "lucide-react"; // Icons from Lucide
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -17,14 +18,15 @@ export default function Navbar() {
 
   return (
     <nav className={`navbar ${scrolled ? "scrolled" : ""}`}>
-      {/* Logo */}
-      <div className="logo">
-        <Link href="/">
+      {/* Logo & Site Name */}
+      <div className="logoContainer">
+        <Link href="/" className="logoLink">
           <Image src="/profile.jpg" alt="Logo" width={50} height={50} />
+          <span className="siteName">SahilWebDev</span>
         </Link>
       </div>
 
-      {/* Desktop Menu */}
+      {/* Desktop Navigation */}
       <ul className={`navLinks ${menuOpen ? "open" : ""}`}>
         <li><Link href="/">Home</Link></li>
         <li><Link href="/about">About</Link></li>
@@ -42,7 +44,7 @@ export default function Navbar() {
 
       {/* Mobile Menu Button */}
       <button className="menuBtn" onClick={() => setMenuOpen(!menuOpen)}>
-        ☰
+        {menuOpen ? <X size={30} /> : <Menu size={30} />}
       </button>
     </nav>
   );
