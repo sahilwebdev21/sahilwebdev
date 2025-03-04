@@ -1,4 +1,4 @@
-/* Reset */
+/* ========== Reset Styles ========== */
 * {
   margin: 0;
   padding: 0;
@@ -177,6 +177,7 @@
   }
 }
 
+/* ========== Main Page Styles ========== */
 .homeContainer {
   display: flex;
   flex-direction: column;
@@ -270,4 +271,117 @@
 
 .socialIcon:hover {
   transform: scale(1.2);
+}
+
+/* ========== Project Page Styles ========== */
+.projectsContainer {
+  text-align: center;
+  padding: 100px 20px 50px;
+  background: linear-gradient(135deg, #121212, #1e1e1e);
+  color: white;
+  min-height: 100vh;
+}
+
+.sectionTitle {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.filterButtons {
+  margin-bottom: 20px;
+}
+
+.filterBtn {
+  margin: 5px;
+  padding: 12px 18px;
+  border: none;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  border-radius: 8px;
+  transition: 0.3s ease-in-out;
+}
+
+.filterBtn:hover,
+.filterBtn.active {
+  background: #ff6b6b;
+  transform: scale(1.1);
+}
+
+.projectsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* Ensures proper layout */
+  max-width: 1000px; /* Keeps layout balanced */
+  margin: auto; /* Centers the grid */
+  gap: 25px;
+  padding-top: 20px;
+}
+
+.projectCard {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 12px;
+  overflow: hidden;
+  text-align: left;
+  transition: transform 0.3s;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+}
+
+.projectCard:hover {
+  transform: translateY(-5px) scale(1.05);
+}
+
+.imageStyle {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.projectContent h2 {
+  margin-top: 15px;
+  font-size: 1.5rem;
+}
+
+.projectContent p {
+  margin-top: 10px;
+  font-size: 1rem;
+  color: #ccc;
+}
+
+.projectLinks {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.liveBtn,
+.githubBtn {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 10px 15px;
+  border-radius: 8px;
+  transition: 0.3s;
+  text-decoration: none;
+  color: white;
+}
+
+.liveBtn {
+  background: #007bff;
+}
+
+.githubBtn {
+  background: #24292e;
+}
+
+.liveBtn:hover {
+  background: #0056b3;
+  transform: scale(1.1);
+}
+
+.githubBtn:hover {
+  background: #181c21;
+  transform: scale(1.1);
 }
