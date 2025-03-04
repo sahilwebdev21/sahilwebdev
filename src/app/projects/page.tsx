@@ -8,42 +8,15 @@ const projects = [
   {
     id: 1,
     title: "Portfolio Website",
-    categories: ["Frontend"],
+    categories: ["Frontend", "NextJs"],
     image: "/sahilwebdev.png",
     description: "A fully responsive Next.js portfolio with animations.",
     live: "https://sahilwebdev.vercel.app/",
     github: "https://github.com/sahilwebdev21/sahilwebdev",
   },
-  {
-    id: 2,
-    title: "E-commerce Dashboard",
-    categories: ["Full Stack"],
-    image: "/ecommerce.png",
-    description: "Admin panel with real-time analytics & authentication.",
-    live: "https://ecommerce.com",
-    github: "https://github.com/yourgithub/ecommerce",
-  },
-  {
-    id: 3,
-    title: "Task Manager API",
-    categories: ["Backend"],
-    image: "/api.png",
-    description: "REST API for managing tasks using Node.js & MySQL.",
-    live: "https://api-taskmanager.com",
-    github: "https://github.com/yourgithub/task-api",
-  },
-  {
-    id: 4,
-    title: "Blog CMS",
-    categories: ["Frontend", "Full Stack"],
-    image: "/blog.png",
-    description: "A headless CMS built with Next.js & Strapi.",
-    live: "https://blogcms.com",
-    github: "https://github.com/yourgithub/blogcms",
-  },
 ];
 
-const categories = ["Frontend", "Backend", "Full Stack"];
+const categories = ["Frontend", "Backend", "Full Stack", "NextJs"];
 
 export default function Projects() {
   const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
