@@ -1,6 +1,6 @@
 :root {
-    --primary: #6C63FF;
-    --secondary: #2F2E41;
+    --primary: #c8c6f5;
+    --secondary: #130a4d;
     --light: #FFFFFF;
     --dark: #1A1A24;
     --highlight: #FF6584;
@@ -32,6 +32,7 @@
     display: flex;
     align-items: center;
     gap: 1rem;
+    text-decoration: none;
 }
 
 .logo-img {
@@ -87,6 +88,7 @@
     align-items: center;
     gap: 0.5rem;
     transition: all 0.3s ease;
+    text-decoration: none;
 }
 
 .contact-btn:hover {
@@ -160,6 +162,7 @@
     display: inline-flex;
     align-items: center;
     gap: 0.8rem;
+    text-decoration: none;
 }
 
 .cta-btn:not(.secondary) {
@@ -399,7 +402,7 @@
 
 /* footer */
 .footer {
-    background: #2F2E41;
+    background: #000000;
     color: white;
     padding: 4rem 5% 2rem;
     position: relative;
@@ -421,7 +424,7 @@
     height: 70px;
     border-radius: 50%;
     margin-bottom: 1.5rem;
-    border: 2px solid #6C63FF;
+    border: 2px solid #ffffff;
 }
 
 .footer-brand h3 {
