@@ -1,6 +1,7 @@
 # SahilWebDev Portfolio
 
-![Portfolio Preview](assets/portfolio-preview.jpg)
+![image](https://github.com/user-attachments/assets/c1555779-0f75-4fa9-976a-3dc6bb042820)
+
 
 A modern, responsive portfolio website showcasing projects, skills, and blog posts. Built with pure HTML, CSS, and JavaScript with a focus on premium UI/UX design.
 
