@@ -52,39 +52,3 @@ cd portfolio
 ```bash
 open index.html # or use your local server
 ```
-
-## 🎨 Customization
-
-### Personal Information
-1. Update `components/navbar.html`:
-```html
-<span class="logo-name">Your Name</span>
-```
-
-2. Modify `js/script.js`:
-```javascript
-document.title = `${pageName} | Your Name`;
-```
-
-### Projects
-Add projects in `pages/projects.html`:
-```html
-<article class="project-card">
-  <img src="assets/project1.jpg" alt="Project Title">
-  <h3>Project Title</h3>
-  <p>Project Description</p>
-</article>
-```
-
-### Styles
-Edit CSS variables in `css/styles.css`:
-```css
-:root {
-  --primary: #6C63FF;
-  --secondary: #2F2E41;
-  --highlight: #FF6584;
-}
-```
-## 📝 License
-MIT License - see [LICENSE](LICENSE) file
----
