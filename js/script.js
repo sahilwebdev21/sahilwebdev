@@ -1,64 +1,79 @@
-// Dynamic title function
-function setPageTitle() {
-    // Get current page path and parse filename
-    const pathSegments = window.location.pathname.split('/');
-    let pageName = pathSegments.pop() || pathSegments.pop(); // Handle nested directories
-    
-    // Remove .html extension and sanitize
-    pageName = pageName.replace('.html', '');
-    
-    // Handle index/home page
-    if(pageName === '' || pageName === 'index') {
-        pageName = 'Home';
-    } else {
-        // Convert to title case and replace hyphens
-        pageName = pageName
-            .replace(/-/g, ' ')
-            .replace(/\b\w/g, c => c.toUpperCase());
-    }
-
-    document.title = `${pageName} | SahilWebDev`;
-}
-
-document.addEventListener('DOMContentLoaded', function() {
-    // Load components
-    Promise.all([
-        fetch('../components/navbar.html').then(res => res.text()),
-        fetch('../components/footer.html').then(res => res.text())
-    ]).then(([navbar, footer]) => {
-        // Insert components
-        document.getElementById('navbar-container').innerHTML = navbar;
-        document.getElementById('footer-container').innerHTML = footer;
-
-        // Add main styles
-        const styles = document.createElement('link');
-        styles.rel = 'stylesheet';
-        styles.href = '../css/styles.css';
-        document.head.appendChild(styles);
-
-        // Set dynamic page title
-        setPageTitle();
-
-        // Update copyright year
-        const copyrightYear = document.getElementById('copyright-year');
-        if(copyrightYear) {
-            copyrightYear.textContent = new Date().getFullYear();
-        }
-
-        // Scroll animations
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, { threshold: 0.1 });
-
-        document.querySelectorAll('.project-card, .newsletter').forEach(el => {
-            observer.observe(el);
+// Navigation scroll effect
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
         });
 
-    }).catch(error => {
-        console.error('Component loading error:', error);
-    });
-});
+        // Mobile menu toggle
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+        
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            hamburger.classList.toggle('active');
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                // Close mobile menu if open
+                navLinks.classList.remove('active');
+                hamburger.classList.remove('active');
+                
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    window.scrollTo({
+                        top: target.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Form submission
+        const contactForm = document.getElementById('contactForm');
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Form validation
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value;
+            
+            if (name && email && subject && message) {
+                // In a real application, you would send the form data to a server
+                alert('Thank you for your message! I will get back to you soon.');
+                contactForm.reset();
+            }
+        });
+
+        // Set active navigation link based on scroll position
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('.nav-links a');
+            
+            let current = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                
+                if (pageYOffset >= (sectionTop - 100)) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').substring(1) === current) {
+                    link.classList.add('active');
+                }
+            });
+        });
