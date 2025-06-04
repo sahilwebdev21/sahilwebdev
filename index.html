@@ -12,91 +12,81 @@
     <!-- Navbar Container -->
     <div id="navbar-container"></div>
 
-    <!-- Main Content -->
-    <main>
         <!-- Hero Section -->
-        <section class="hero">
+    <section class="hero" id="home">
+        <div class="container">
             <div class="hero-content">
                 <div class="hero-text">
-                    <h1 class="animated-text">Turning Ideas Into<br><span class="highlight">Digital Reality</span></h1>
-                    <p class="hero-subtext">Full Stack Developer & UI/UX Designer</p>
-                    <div class="cta-container">
-                        <a href="pages/projects.html" class="cta-btn">View Work</a>
-                        <a href="pages/contact.html" class="cta-btn secondary">Hire Me</a>
-                    </div>
-
-                    <div class="hero-visual">
-                        <div class="floating-shapes">
-                            <div class="shape circle"></div>
-                            <div class="shape triangle"></div>
-                            <div class="shape square"></div>
-                        </div>
-                        <img src="" alt="img" class="hero-image">
-                    </div>
+                    <h1>Hi, I'm <span>Alex Morgan</span><br>Web Developer</h1>
+                    <p>I create engaging, responsive websites and applications with cutting-edge technologies. Transforming ideas into digital experiences.</p>
+                    <a href="#projects" class="cta-button">View My Work <i class="fas fa-arrow-right"></i></a>
                 </div>
-        </section>
-
-        <!-- Featured Projects -->
-        <section id="projects" class="featured-projects">
-            <div class="section-header">
-                <h2>Featured <span class="highlight">Projects</span></h2>
-                <p>Explore my latest creative solutions</p>
+                <div class="hero-image">
+                    <div class="profile-img"></div>
+                    <div class="skills-badge badge-1">Frontend Developer</div>
+                    <div class="skills-badge badge-2">UI/UX Designer</div>
+                    <div class="skills-badge badge-3">JavaScript Expert</div>
+                </div>
             </div>
+        </div>
+    </section>
 
-            <div class="projects-grid">
-                <!-- Project 1 -->
-                <article class="project-card">
-                    <div class="project-image">
-                        <img src="/assets/profile.jpg" alt="E-commerce Platform">
-                        <div class="project-tags">
-                            <span>React</span>
-                            <span>Node.js</span>
-                            <span>MongoDB</span>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <h3>E-commerce Platform</h3>
-                        <p>Full-stack shopping solution with real-time analytics</p>
-                        <a href="/pages/project-details.html" class="project-link">View Case Study →</a>
-                    </div>
-                </article>
-
-                <!-- Project 2 -->
-                <article class="project-card">
-                    <div class="project-image">
-                        <img src="/assets/profile.jpg" alt="AI Chat Interface">
-                        <div class="project-tags">
-                            <span>Python</span>
-                            <span>TensorFlow</span>
-                            <span>NLP</span>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <h3>AI Chat Interface</h3>
-                        <p>Natural language processing conversation system</p>
-                        <a href="/pages/project-details.html" class="project-link">View Case Study →</a>
-                    </div>
-                </article>
-
-                <!-- Project 3 -->
-                <article class="project-card">
-                    <div class="project-image">
-                        <img src="/assets/profile.jpg" alt="Mobile Fitness App">
-                        <div class="project-tags">
-                            <span>Flutter</span>
-                            <span>Firebase</span>
-                            <span>HealthKit</span>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <h3>Fitness Tracking App</h3>
-                        <p>Cross-platform health monitoring solution</p>
-                        <a href="/pages/project-details.html" class="project-link">View Case Study →</a>
-                    </div>
-                </article>
+    <!-- Skills Section -->
+    <section class="skills" id="skills">
+        <div class="container">
+            <div class="section-title">
+                <h2>My Skills</h2>
+                <p>Technologies I work with</p>
             </div>
-        </section>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fab fa-html5"></i>
+                    </div>
+                    <h3>Frontend Development</h3>
+                    <p>HTML5, CSS3, JavaScript, React, Vue.js, responsive design, cross-browser compatibility</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-server"></i>
+                    </div>
+                    <h3>Backend Development</h3>
+                    <p>Node.js, Express, MongoDB, Firebase, RESTful APIs, authentication, database design</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-paint-brush"></i>
+                    </div>
+                    <h3>UI/UX Design</h3>
+                    <p>Figma, Adobe XD, user research, wireframing, prototyping, interaction design</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Mobile Development</h3>
+                    <p>React Native, Progressive Web Apps, responsive design, mobile-first approach</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3>Dev Tools</h3>
+                    <p>Git, Webpack, Docker, Jest, CI/CD pipelines, AWS, performance optimization</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>SEO & Analytics</h3>
+                    <p>Google Analytics, Lighthouse, performance metrics, accessibility, technical SEO</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
+
+        
         <!-- Newsletter Section -->
         <section class="newsletter">
             <div class="newsletter-content">
